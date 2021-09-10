@@ -65,6 +65,13 @@ header #search-note input{
     border-left: 5px solid #efefef;
 }
 
+.note-list ul li p:nth-child(1){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
 .note-list ul li p:nth-child(2) {
     text-align: right;
 }
