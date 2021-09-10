@@ -66,13 +66,18 @@
 
    ul.addEventListener('click',function(e){
       if(e.target.classList[1] === "fa-times"){
-         var parentpar = e.target.parentNode;
-         var input = parentpar.nextElementSibling;
-         var li = input.parentNode;
-         li.parentNode.removeChild(li);
+         var proceed = confirm("Are you sure you want to proceed?");
+         if (proceed) {
+            var parentpar = e.target.parentNode;
+            var input = parentpar.nextElementSibling;
+            var li = input.parentNode;
+            li.parentNode.removeChild(li);
+         } else {
+            console.log("you are not deleting");
+         }
+
       };
    })
-
 //////************************HIDE LISTS function */
 
 var hide = document.getElementById('hide');
